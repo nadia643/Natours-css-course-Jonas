@@ -1,25 +1,14 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "Learning page for natours",
+  "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss cdd/style.css"
-    },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nadia643/Natours-css-course-Jonas.git"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
-  "author": "Nadia",
+  "author": "Jonas",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nadia643/Natours-css-course-Jonas/issues"
-  },
-  "homepage": "https://github.com/nadia643/Natours-css-course-Jonas#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
-  },
-  "dependencies": {
-    "jquery": "^3.4.1"
+    "node-sass": "^4.5.3"
   }
 }

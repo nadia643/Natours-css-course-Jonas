@@ -7,10 +7,12 @@ $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 body {
@@ -18,7 +20,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 30px;
 }
 
@@ -55,7 +57,7 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
 
     backface-visibility: hidden; /*fixes animation jump*/
@@ -139,16 +141,16 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+    box-shadow: 0 10px 20px rgba($color-black, .2);
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    box-shadow: 0 5px 10px rgba($color-black, .2);
 }
 
 .btn-white {
-    background-color: #fff;
+    background-color: $color-white;
     color: #777;
 }
 
@@ -166,7 +168,7 @@ body {
 }
 
 .btn-white:after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
