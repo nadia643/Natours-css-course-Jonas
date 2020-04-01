@@ -20,6 +20,8 @@
     // hidden - hides the back part of the element
     backface-visibility: hidden;
     border-radius: 3px;
+    //The image below in the card is overflowing the parent in the corners, and this wil make the corners rounded again
+    overflow: hidden;
     box-shadow: $shadow-one;
 
     &--front {
@@ -30,7 +32,7 @@
         transform: rotateY(180deg);
 
         &-1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);;
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
         }
     }
 }
@@ -50,7 +52,13 @@
         height: 23rem;
 
         &--1 {
-            background-image: url('../img/nat-5.jpg');
+            //there is 2 backgrounds here; one is the colour and one is the picture
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url('../img/nat-5.jpg');
+            height: 23rem;
+            //blends the orange as above with the background
+            background-blend-mode: screen;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100%, 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100%, 85%, 0 100%);
         }
 
         &--2 {
