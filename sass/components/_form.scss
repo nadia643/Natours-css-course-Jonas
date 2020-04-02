@@ -13,6 +13,8 @@
         border: none;
         width: 90%;
         display: block;
+        transition: all .3s;
+
 
         &:focus {
             outline: none;
@@ -37,11 +39,12 @@
         margin-left: 2rem;
         margin-top: .7rem;
         display: block;
+        transition: all .3s;
     }
     //+ is the adjacent sibling selector
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
-        
+        transform: translateY(-4rem);
     }
 }
