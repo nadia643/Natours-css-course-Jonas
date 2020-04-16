@@ -16,6 +16,8 @@
     left: 0;
     width: 100%;
     // hidden - hides the back part of the element
+    // this webkit makes it useable for safari
+    --webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     //The image below in the card is overflowing the parent in the corners, and this wil make the corners rounded again
